@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>REDMI Note 17 Pro Max 5G · Máxima bateria, máxima energia</title>
+<meta name="description" content="Conheça o REDMI Note 17 Pro Max 5G: bateria de 9210 mAh, 100 W HyperCharge, IP66/IP68 e tela AMOLED 1.5K de 6,83 polegadas.">
+<meta property="og:title" content="REDMI Note 17 Pro Max 5G">
+<meta property="og:description" content="Máxima bateria, máxima energia. Gire o celular em 360°.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#07080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080a; --bg2:#0f1115; --txt:#f4f2ee; --sub:#9aa0aa; --ac:#ff6a13; --ac2:#ffb37a;
+  --fonte:'Sora',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--fonte);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.d{color:var(--ac)}
+.tag{display:inline-block;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--ac);margin-bottom:18px}
+
+/* revelação por scroll (motion graphics de texto) */
+.rv{opacity:0;transform:translateY(40px);filter:blur(8px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),filter 1s}
+.rv.in{opacity:1;transform:none;filter:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
+.linha-rv{display:block;overflow:hidden}
+.linha-rv>span{display:block;transform:translateY(105%);transition:transform 1.1s cubic-bezier(.2,.8,.1,1)}
+.in .linha-rv>span,.linha-rv.in>span{transform:none}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+.hero .foto{position:absolute;inset:0 0 0 22%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%);mask-image:linear-gradient(90deg,transparent,#000 22%);background:url(img/hero.jpg) center/cover;transform:scale(1.15);animation:entra 3.2s cubic-bezier(.2,.7,.1,1) forwards}
+@keyframes entra{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,10,.15) 0%,rgba(7,8,10,.05) 40%,rgba(7,8,10,.92) 100%),radial-gradient(70% 60% at 20% 70%,rgba(7,8,10,.65),transparent)}
+.hero .faixas span{position:absolute;left:0;right:0;height:50%;background:#000;z-index:3;animation:abre 1.4s cubic-bezier(.8,0,.2,1) .2s forwards}
+.hero .faixas span:first-child{top:0}.hero .faixas span:last-child{bottom:0}
+@keyframes abre{to{height:0}}
+.hero .conteudo{position:relative;z-index:2;padding:0 6vw 12vh;max-width:900px}
+.hero h1{font-size:clamp(40px,7.4vw,104px);line-height:.98;font-weight:800;letter-spacing:-.03em}
+.hero h1 small{display:block;font-size:.34em;font-weight:300;letter-spacing:.02em;color:var(--sub);margin-top:14px}
+.hero p{font-size:clamp(16px,1.6vw,20px);color:#d6d3cc;margin-top:22px;max-width:520px;line-height:1.6}
+.hero .anim1 span{animation:sobe 1.1s cubic-bezier(.2,.8,.1,1) forwards;transform:translateY(105%)}
+.hero .anim1:nth-child(2) span{animation-delay:.15s}
+@keyframes sobe{to{transform:none}}
+.hero .fade{opacity:0;animation:aparece 1.2s .9s forwards}
+@keyframes aparece{to{opacity:1}}
+.rolar{position:absolute;right:6vw;bottom:12vh;z-index:2;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;color:var(--sub);writing-mode:vertical-rl}
+.rolar i{width:1px;height:70px;background:linear-gradient(var(--ac),transparent);animation:desce 2s infinite}
+@keyframes desce{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- 360° ---------- */
+.giro{position:relative;padding:120px 6vw 100px;background:radial-gradient(60% 50% at 50% 55%,#1a1410 0%,var(--bg) 70%);overflow:hidden}
+.giro .topo{text-align:center;max-width:720px;margin:0 auto}
+.giro h2{font-size:clamp(30px,4.4vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.giro .topo p{color:var(--sub);margin-top:14px;line-height:1.6}
+.palco{position:relative;height:min(78vh,720px);min-height:480px;margin-top:20px;display:grid;place-items:center;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.palco:active{cursor:grabbing}
+.cena3d{perspective:1400px;width:100%;height:100%;display:grid;place-items:center}
+.fone{--w:min(250px,42vw);--h:calc(var(--w)*2.048);--p:calc(var(--w)*.11);--r:calc(var(--w)*.135);
+  position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;will-change:transform}
+.face{position:absolute;inset:0;border-radius:var(--r);overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#0c0c0e center/100% 100% no-repeat}
+.face::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 35%,rgba(0,0,0,0) 65%,rgba(0,0,0,.35) 100%);opacity:var(--brilho,.6)}
+.frente{background-image:url(img/face-frente.png);transform:translateZ(calc(var(--p)/2))}
+.costas{background-image:url(img/face-costas-preto.png);transform:rotateY(180deg) translateZ(calc(var(--p)/2))}
+.lado{position:absolute;top:var(--r);bottom:var(--r);width:var(--p);left:calc(50% - var(--p)/2);background:linear-gradient(90deg,#1b1c20,#55575e 45%,#2a2b30 60%,#121316);border-radius:calc(var(--p)/2)}
+.lado.dir{transform:rotateY(90deg) translateZ(calc(var(--w)/2 - 1px))}
+.lado.esq{transform:rotateY(-90deg) translateZ(calc(var(--w)/2 - 1px))}
+.lado.dir b{position:absolute;left:18%;right:18%;border-radius:3px;background:#3a3c42;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.borda{position:absolute;left:var(--r);right:var(--r);height:var(--p);top:calc(50% - var(--p)/2);background:linear-gradient(180deg,#1b1c20,#55575e 45%,#2a2b30 60%,#121316);border-radius:calc(var(--p)/2)}
+.borda.cima{transform:rotateX(90deg) translateZ(calc(var(--h)/2 - 1px))}
+.borda.baixo{transform:rotateX(-90deg) translateZ(calc(var(--h)/2 - 1px))}
+.borda.baixo::after{content:"";position:absolute;left:42%;right:42%;top:30%;bottom:30%;border-radius:99px;background:#050506}
+.fone.branco .costas{background-image:url(img/face-costas-branco.png)}
+.fone.branco .lado,.fone.branco .borda{background:linear-gradient(90deg,#b9bcc2,#f2f3f5 45%,#d7d9dd 60%,#a7aab0)}
+.fone.branco .borda{background:linear-gradient(180deg,#b9bcc2,#f2f3f5 45%,#d7d9dd 60%,#a7aab0)}
+.sombra{position:absolute;bottom:6%;left:50%;width:min(300px,50vw);height:40px;translate:-50% 0;background:radial-gradient(closest-side,rgba(0,0,0,.85),transparent);filter:blur(6px)}
+.brilhoChao{position:absolute;bottom:4%;left:50%;width:min(520px,80vw);height:120px;translate:-50% 0;background:radial-gradient(closest-side,rgba(255,106,19,.22),transparent);pointer-events:none}
+
+/* HUD do 360 (motion graphics) */
+.hud{position:absolute;inset:0;pointer-events:none;display:grid;place-items:center}
+.hud svg{width:min(640px,96vw);height:auto;overflow:visible}
+.hud .anel{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1}
+.hud .ticks{stroke:rgba(255,255,255,.28);stroke-width:1}
+.hud .arco{fill:none;stroke:var(--ac);stroke-width:2;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(255,106,19,.8))}
+.hud .grau{font:600 14px var(--fonte);fill:var(--ac);letter-spacing:.1em}
+.hud .rot{transform-origin:320px 320px}
+.callout{position:absolute;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--sub);opacity:0;transition:opacity .8s,transform .8s;pointer-events:none}
+.callout.in{opacity:1}
+.callout b{display:block;font-size:clamp(22px,2.4vw,32px);color:var(--txt);font-weight:800;letter-spacing:-.01em}
+.callout i{display:block;width:70px;height:1px;background:linear-gradient(90deg,var(--ac),transparent)}
+.callout.dirc{flex-direction:row-reverse;text-align:right}
+.callout.dirc i{background:linear-gradient(270deg,var(--ac),transparent)}
+.c1{left:6%;top:18%}.c2{left:4%;bottom:22%}.c3{right:6%;top:22%}.c4{right:4%;bottom:18%}
+.controles{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:6px;flex-wrap:wrap}
+.cor{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;border:1px solid #262a31;background:#0f1115;color:var(--sub);font:500 13px var(--fonte);cursor:pointer}
+.cor span{width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.cor.on{border-color:var(--ac);color:var(--txt)}
+.dica360{font-size:12px;color:var(--sub);letter-spacing:.08em}
+
+/* ---------- CENAS ---------- */
+.cena{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.cena .bg{position:absolute;inset:-8% 0;background-size:cover;background-position:center;will-change:transform}
+.cena::before{content:"";position:absolute;inset:0;z-index:1}
+.cena .txt{position:relative;z-index:2;padding:12vh 6vw;max-width:640px}
+.cena.dir .txt{margin-left:auto}
+.cena h2{font-size:clamp(32px,4.6vw,64px);font-weight:800;letter-spacing:-.025em;line-height:1.02}
+.cena p{color:#cfcbc4;margin-top:18px;line-height:1.65;font-size:clamp(15px,1.3vw,18px)}
+.bat::before{background:linear-gradient(90deg,rgba(7,8,10,.95) 0%,rgba(7,8,10,.7) 45%,rgba(7,8,10,.1) 80%)}
+.agu::before{background:linear-gradient(270deg,rgba(7,8,10,.95) 0%,rgba(7,8,10,.65) 45%,rgba(7,8,10,.1) 80%)}
+.tel::before{background:linear-gradient(90deg,rgba(7,8,10,.95) 0%,rgba(7,8,10,.65) 45%,rgba(7,8,10,.15) 85%)}
+
+/* números animados */
+.grande{white-space:nowrap;padding-right:.08em;font-size:clamp(70px,11vw,160px);font-weight:800;line-height:.9;letter-spacing:-.04em;background:linear-gradient(180deg,#fff 20%,var(--ac2) 70%,var(--ac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.grande small{font-size:.3em;letter-spacing:0;margin-left:6px}
+.barras{margin-top:28px;display:grid;gap:14px;max-width:460px}
+.barra .rot{display:flex;justify-content:space-between;font-size:13px;color:var(--sub);margin-bottom:6px}
+.barra .rot b{color:var(--txt);font-weight:600}
+.barra .trilho{height:4px;background:#1d2026;border-radius:4px;overflow:hidden}
+.barra .enche{height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:4px;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{padding:10px 16px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:13px;background:rgba(15,17,21,.6);backdrop-filter:blur(6px)}
+.chip b{color:var(--ac)}
+.raio{position:absolute;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(100deg,transparent 0 46%,rgba(255,106,19,.0) 46%,rgba(255,106,19,.18) 49%,transparent 52%);background-size:300% 100%;animation:varre 5s linear infinite;mix-blend-mode:screen}
+@keyframes varre{from{background-position:100% 0}to{background-position:-100% 0}}
+
+/* grade de specs da tela */
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin-top:30px;max-width:520px}
+.stat b{display:block;font-size:clamp(28px,3.4vw,44px);font-weight:800;letter-spacing:-.02em}
+.stat span{font-size:13px;color:var(--sub)}
+
+/* Branco Névoa: fotocrômico (o tom muda com o scroll) */
+.nevoa{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#d9d2c8}
+.nevoa{background:#e7dfd4}
+.nevoa .bg{position:absolute;inset:0 0 0 34%;background:url(img/branco.jpg) 40% center/cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.nevoa .sol{position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,170,120,0) 20%,rgba(255,140,90,.55) 55%,rgba(255,200,150,.2) 80%);mix-blend-mode:soft-light;opacity:var(--sol,0)}
+.nevoa .txt{position:relative;z-index:2;padding:12vh 6vw;max-width:560px;color:#1d1a17}
+.nevoa h2{font-size:clamp(32px,4.6vw,64px);font-weight:800;letter-spacing:-.025em;line-height:1.02}
+.nevoa p{margin-top:18px;line-height:1.65;color:#3d3833}
+.nevoa .tag{color:#c2501a}
+.medidor{margin-top:26px;display:flex;align-items:center;gap:12px;font-size:12px;color:#5a534c}
+.medidor .tr{position:relative;flex:0 0 200px;height:6px;border-radius:6px;background:linear-gradient(90deg,#f5f2ee,#f3b291)}
+.medidor .pt{position:absolute;top:-3px;left:calc(var(--sol,0)*188px);width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #c2501a}
+
+/* câmera e desempenho */
+.cards{padding:120px 6vw;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1240px;margin:0 auto}
+.card{position:relative;background:linear-gradient(180deg,#121419,#0b0c10);border:1px solid #1d2027;border-radius:24px;padding:34px 28px;overflow:hidden}
+.card::before{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,106,19,.25),transparent)}
+.card h3{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:16px}
+.card b{display:block;font-size:clamp(30px,3vw,42px);font-weight:800;letter-spacing:-.02em}
+.card p{color:var(--sub);margin-top:10px;line-height:1.6;font-size:14px}
+.card ul{list-style:none;margin-top:16px;display:grid;gap:8px;font-size:14px;color:#cfcbc4}
+.card li::before{content:"— ";color:var(--ac)}
+.titSec{text-align:center;padding:0 6vw;margin-top:40px}
+.titSec h2{font-size:clamp(30px,4.4vw,58px);font-weight:800;letter-spacing:-.02em}
+
+/* CTA */
+.cta{position:relative;padding:140px 6vw 120px;text-align:center;overflow:hidden;background:radial-gradient(50% 60% at 50% 100%,rgba(255,106,19,.28),transparent 70%)}
+.cta h2{font-size:clamp(36px,6vw,84px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.cta p{color:var(--sub);margin-top:16px}
+.botao{display:inline-flex;align-items:center;gap:12px;margin-top:36px;padding:20px 38px;border-radius:999px;background:var(--ac);color:#140a03;font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 18px 50px rgba(255,106,19,.35);transition:transform .25s}
+.botao:hover{transform:translateY(-3px) scale(1.02)}
+.botao.off{background:#1d2026;color:var(--sub);box-shadow:none;pointer-events:none}
+footer{padding:40px 6vw 60px;border-top:1px solid #15171c;color:#6b717c;font-size:12px;line-height:1.7;max-width:1100px;margin:0 auto}
+
+@media (max-width:820px){
+  .callout{display:none}
+  .cards{grid-template-columns:1fr}
+  .cena{align-items:flex-end}
+  .bat::before,.agu::before,.tel::before{background:linear-gradient(180deg,rgba(7,8,10,.1) 0%,rgba(7,8,10,.55) 40%,rgba(7,8,10,.96) 75%)}
+  .cena .txt{padding-bottom:8vh}
+  .nevoa{align-items:flex-start}
+  .nevoa .bg{inset:auto 0 0 0;height:55%;-webkit-mask-image:linear-gradient(180deg,transparent,#000 30%);mask-image:linear-gradient(180deg,transparent,#000 30%);background-position:45% center}
+  .nevoa{min-height:auto;padding-bottom:58vh}
+  .rolar{display:none}
+  .hero .foto{inset:0;-webkit-mask-image:none;mask-image:none;background-position:58% center}
+  .palco{height:70vh;min-height:430px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none;filter:none}.linha-rv>span,.hero .anim1 span{transform:none}
+  .hero .faixas{display:none}.hero .foto{transform:none}.hero .fade{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="foto" role="img" aria-label="REDMI Note 17 Pro Max 5G em estúdio escuro com luz laranja"></div>
+  <div class="faixas"><span></span><span></span></div>
+  <div class="conteudo">
+    <div class="tag fade">Novo · 5G</div>
+    <h1><span class="linha-rv anim1"><span>REDMI Note 17</span></span><span class="linha-rv anim1"><span class="d">Pro Max</span></span>
+      <small class="fade">Máxima bateria. Máxima energia.</small></h1>
+    <p class="fade">9210 mAh, carregamento de 100 W e resistência IP68 num corpo de 8,65 mm. Gire o celular em 360° logo abaixo.</p>
+  </div>
+  <div class="rolar">ROLE<i></i></div>
+</header>
+
+<!-- 360° -->
+<section class="giro" id="giro">
+  <div class="topo rv">
+    <div class="tag">360°</div>
+    <h2>Vire. Gire. <span class="d">Confira cada detalhe.</span></h2>
+    <p>Arraste com o dedo ou com o mouse para girar o celular.</p>
+  </div>
+  <div class="palco" id="palco">
+    <div class="brilhoChao"></div>
+    <div class="hud" aria-hidden="true">
+      <svg viewBox="0 0 640 640">
+        <circle class="anel" cx="320" cy="320" r="300"/>
+        <circle class="anel" cx="320" cy="320" r="262" stroke-dasharray="2 10"/>
+        <g class="rot" id="hudTicks"></g>
+        <path class="arco" id="hudArco" d=""/>
+        <text class="grau" id="hudGrau" x="320" y="34" text-anchor="middle">0°</text>
+      </svg>
+    </div>
+    <div class="cena3d"><div class="fone" id="fone">
+      <div class="face frente"></div>
+      <div class="face costas"></div>
+      <div class="lado dir"><b style="top:14%;height:9%"></b><b style="top:26%;height:6%"></b></div>
+      <div class="lado esq"></div>
+      <div class="borda cima"></div>
+      <div class="borda baixo"></div>
+    </div></div>
+    <div class="sombra"></div>
+    <div class="callout c1" data-c><div><b>6,83"</b>AMOLED 1.5K · 120 Hz</div><i></i></div>
+    <div class="callout c2" data-c><div><b>50 MP</b>câmera principal com OIS</div><i></i></div>
+    <div class="callout c3 dirc" data-c><div><b>9210 mAh</b>bateria de silício-carbono</div><i></i></div>
+    <div class="callout c4 dirc" data-c><div><b>8,65 mm</b>de espessura · 225,1 g</div><i></i></div>
+  </div>
+  <div class="controles">
+    <button class="cor on" data-cor="preto"><span style="background:#141416"></span>Preto</button>
+    <button class="cor" data-cor="branco"><span style="background:#f1efea"></span>Branco Névoa</button>
+    <span class="dica360" id="dica360">⟲ arraste para girar</span>
+  </div>
+</section>
+
+<!-- BATERIA -->
+<section class="cena bat">
+  <div class="bg" data-px style="background-image:url(img/bateria.jpg);background-position:70% center"></div>
+  <div class="raio"></div>
+  <div class="txt">
+    <div class="tag rv">Bateria titânica</div>
+    <div class="grande rv d1"><span data-conta="9210">0</span><small>mAh</small></div>
+    <h2 class="rv d2" style="margin-top:14px">Até <span class="d">3 dias</span> com uma carga.</h2>
+    <p class="rv d3">100 W HyperCharge: com 10 minutos de carga, até 7 horas de vídeo. E ainda vira carregador de bolso, com até 27 W de carregamento reverso.</p>
+    <div class="barras rv d4">
+      <div class="barra"><div class="rot"><span>Reprodução de vídeo</span><b>até 37 h</b></div><div class="trilho"><div class="enche" data-w="100"></div></div></div>
+      <div class="barra"><div class="rot"><span>Navegação</span><b>até 22 h</b></div><div class="trilho"><div class="enche" data-w="59"></div></div></div>
+      <div class="barra"><div class="rot"><span>Jogos</span><b>até 19 h</b></div><div class="trilho"><div class="enche" data-w="51"></div></div></div>
+      <div class="barra"><div class="rot"><span>Gravação de vídeo</span><b>até 13 h</b></div><div class="trilho"><div class="enche" data-w="35"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁGUA -->
+<section class="cena agu dir">
+  <div class="bg" data-px style="background-image:url(img/agua.jpg);background-position:30% center"></div>
+  <div class="txt">
+    <div class="tag rv">Estrutura titânica</div>
+    <h2 class="rv d1">Água, poeira e queda: <span class="d">pode vir.</span></h2>
+    <p class="rv d2">Resistência IP66/IP68, certificada para 2 metros de profundidade por 72 horas em água doce parada. Certificado pela SGS para quedas de até 3 metros, com Corning® Gorilla® Glass Victus® 2 na tela.</p>
+    <div class="chips rv d3">
+      <span class="chip"><b>IP68</b> 2 m · 72 h</span>
+      <span class="chip"><b>3 m</b> queda certificada</span>
+      <span class="chip"><b>Victus® 2</b> Gorilla® Glass</span>
+    </div>
+  </div>
+</section>
+
+<!-- TELA -->
+<section class="cena tel">
+  <div class="bg" data-px style="background-image:url(img/tela.jpg);background-position:65% center"></div>
+  <div class="txt">
+    <div class="tag rv">Tela de nível top de linha</div>
+    <h2 class="rv d1">Brilho de <span class="d">sol de meio-dia.</span></h2>
+    <p class="rv d2">AMOLED 1.5K CrystalRes de 6,83", nítida mesmo sob luz solar direta, com cores DCI-P3 e cuidado com os olhos certificado pela TÜV Rheinland.</p>
+    <div class="stats rv d3">
+      <div class="stat"><b><span data-conta="3500">0</span></b><span>nits de pico de brilho</span></div>
+      <div class="stat"><b><span data-conta="120">0</span> Hz</b><span>taxa de atualização</span></div>
+      <div class="stat"><b>1.5K</b><span>2772 × 1280</span></div>
+      <div class="stat"><b><span data-conta="3200">0</span> Hz</b><span>toque instantâneo (Game Turbo)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCO NÉVOA -->
+<section class="nevoa" id="nevoa">
+  <div class="bg" role="img" aria-label="REDMI Note 17 Pro Max 5G na cor Branco Névoa sob luz do sol"></div>
+  <div class="sol"></div>
+  <div class="txt">
+    <div class="tag rv">Branco Névoa</div>
+    <h2 class="rv d1">A cor que muda com o sol.</h2>
+    <p class="rv d2">Com tecnologia fotocrômica, a traseira Branco Névoa passa do branco de nuvem para um tom quente de rosa-alaranjado sob a luz do sol.</p>
+    <div class="medidor rv d3"><span>sombra</span><div class="tr"><div class="pt"></div></div><span>sol</span></div>
+  </div>
+</section>
+
+<!-- CÂMERA E DESEMPENHO -->
+<div class="titSec rv"><div class="tag">Por dentro</div><h2>Câmera, potência e <span class="d">6 anos</span> de fôlego.</h2></div>
+<section class="cards">
+  <div class="card rv"><h3>Câmeras</h3><b>50 MP</b><p>Principal com estabilização óptica (OIS), f/1.5.</p>
+    <ul><li>Ultra grande-angular de 8 MP</li><li>Frontal de 32 MP</li><li>Vídeo duplo: frente e trás ao mesmo tempo</li><li>Modo Subaquático</li></ul></div>
+  <div class="card rv d1"><h3>Desempenho</h3><b>Snapdragon® 6 Gen 5</b><p>Plataforma de 4 nm, octa-core, para jogos, streaming e multitarefa.</p>
+    <ul><li>8 GB de RAM + 512 GB</li><li>Até 16 GB de RAM com extensão de memória</li><li>Xiaomi HyperOS 3 com Gemini</li></ul></div>
+  <div class="card rv d2"><h3>Para durar</h3><b>6 anos</b><p>De atualizações de segurança e bateria certificada pela TÜV SÜD.</p>
+    <ul><li>1600 ciclos com ≥ 80% de capacidade</li><li>NFC e controle infravermelho</li><li>Leitor de digital na tela</li></ul></div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2 class="rv">Energia para <span class="d">dias</span>.<br>Não para horas.</h2>
+  <p class="rv d1">REDMI Note 17 Pro Max 5G · 8 GB + 512 GB · Preto ou Branco Névoa</p>
+  <a class="botao rv d2" id="botao" href="#" target="_blank" rel="noopener">Quero o meu</a>
+</section>
+
+<footer>
+  Anúncio independente, sem vínculo oficial com a Xiaomi. Imagens ilustrativas criadas com IA; o produto real pode variar.
+  Especificações conforme mi.com/br (consulta em 20/11/2026). Dados de autonomia, carga, brilho e durabilidade são de testes de laboratório informados pelo fabricante; os resultados reais variam com o uso.
+  A resistência à água vale para as condições de teste e não é coberta pela garantia. REDMI, Xiaomi, Snapdragon, Corning, Gorilla e Victus são marcas de seus respectivos donos.
+</footer>
+
+<script>
+/* ===== CONFIG: link de compra ou WhatsApp de quem vende ===== */
+const CONFIG = { link: '', whatsapp: '', mensagem: 'Olá! Quero o REDMI Note 17 Pro Max 5G.' };
+
+const botao = document.getElementById('botao');
+if (CONFIG.link) botao.href = CONFIG.link;
+else if (CONFIG.whatsapp) botao.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.mensagem)}`;
+else { botao.textContent = 'Link de compra em breve'; botao.classList.add('off'); botao.removeAttribute('href'); }
+
+/* ---------- revelação + contadores + barras ---------- */
+const conta = el => { if (el.dataset.ok) return; el.dataset.ok = 1; const fim = +el.dataset.conta, t0 = performance.now(), dur = 1800;
+  const passo = t => { const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 4); el.textContent = Math.round(fim * e); if (p < 1) requestAnimationFrame(passo); }; requestAnimationFrame(passo); };
+const obs = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-conta]').forEach(conta);
+  if (e.target.matches('[data-conta]')) conta(e.target);
+  e.target.querySelectorAll('.enche').forEach(b => b.style.width = b.dataset.w + '%');
+  obs.unobserve(e.target); }), { threshold: .25 });
+document.querySelectorAll('.rv,[data-c]').forEach(el => obs.observe(el));
+
+/* ---------- parallax e Branco Névoa (fotocrômico pelo scroll) ---------- */
+const pxs = [...document.querySelectorAll('[data-px]')], nevoa = document.getElementById('nevoa');
+let pedido = false;
+function noScroll(){ pedido = false; const H = innerHeight;
+  pxs.forEach(b => { const r = b.parentElement.getBoundingClientRect(); if (r.bottom < 0 || r.top > H) return;
+    const p = (r.top + r.height/2 - H/2) / H; b.style.transform = `translateY(${p * -8}%) scale(${1.08 - Math.abs(p)*0.04})`; });
+  const r = nevoa.getBoundingClientRect(); const s = Math.min(1, Math.max(0, (H - r.top) / (H + r.height*0.4)));
+  nevoa.style.setProperty('--sol', s.toFixed(3));
+}
+addEventListener('scroll', () => { if (!pedido) { pedido = true; requestAnimationFrame(noScroll); } }, { passive:true });
+noScroll();
+
+/* ---------- 360°: arrastar gira (com inércia), gira sozinho parado ---------- */
+const fone = document.getElementById('fone'), palco = document.getElementById('palco');
+let ang = -25, incl = -6, vel = 0, arrasto = null, ultimoToque = 0;
+const ticks = document.getElementById('hudTicks');
+ticks.innerHTML = Array.from({length:72}, (_,i) => { const a = i*5*Math.PI/180, r1 = i%6 ? 276 : 268, r2 = 284;
+  return `<line class="ticks" x1="${320+r1*Math.sin(a)}" y1="${320-r1*Math.cos(a)}" x2="${320+r2*Math.sin(a)}" y2="${320-r2*Math.cos(a)}"/>`; }).join('');
+const arco = document.getElementById('hudArco'), grau = document.getElementById('hudGrau');
+function desenha(){
+  fone.style.transform = `rotateX(${incl}deg) rotateY(${ang}deg)`;
+  const a = ((ang % 360) + 360) % 360;
+  // luz que acompanha o giro: a face de frente para a câmera brilha mais
+  const c = Math.cos(a*Math.PI/180);
+  fone.querySelector('.frente').style.setProperty('--brilho', (0.35 + 0.45*Math.max(0,c)).toFixed(2));
+  fone.querySelector('.costas').style.setProperty('--brilho', (0.35 + 0.45*Math.max(0,-c)).toFixed(2));
+  ticks.style.transform = `rotate(${-a}deg)`;
+  const r = 300, fimA = a*Math.PI/180, x = 320 + r*Math.sin(fimA), y = 320 - r*Math.cos(fimA);
+  arco.setAttribute('d', a < 0.5 ? '' : `M320 20 A${r} ${r} 0 ${a > 180 ? 1 : 0} 1 ${x.toFixed(1)} ${y.toFixed(1)}`);
+  grau.textContent = Math.round(a) + '°';
+}
+palco.addEventListener('pointerdown', e => { arrasto = { x:e.clientX, y:e.clientY, a:ang, i:incl, t:performance.now(), ux:e.clientX }; vel = 0; palco.setPointerCapture(e.pointerId); document.getElementById('dica360').style.opacity = .4; });
+palco.addEventListener('pointermove', e => { if (!arrasto) return; const now = performance.now();
+  ang = arrasto.a + (e.clientX - arrasto.x) * 0.55; incl = Math.max(-25, Math.min(25, arrasto.i - (e.clientY - arrasto.y) * 0.15));
+  vel = (e.clientX - arrasto.ux) / Math.max(1, now - arrasto.t) * 9; arrasto.ux = e.clientX; arrasto.t = now; ultimoToque = now; desenha(); });
+const solta = () => { arrasto = null; ultimoToque = performance.now(); };
+palco.addEventListener('pointerup', solta); palco.addEventListener('pointercancel', solta);
+let ult = performance.now();
+(function laco(t){ const dt = t - ult; ult = t;
+  if (!arrasto) {
+    if (Math.abs(vel) > 0.05) { ang += vel; vel *= 0.94; }
+    else if (t - ultimoToque > 2500) { ang += dt * 0.022; incl += (-6 - incl) * 0.02; }   // gira sozinho
+    desenha();
+  }
+  requestAnimationFrame(laco); })(ult);
+
+document.querySelectorAll('.cor').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.cor').forEach(x => x.classList.toggle('on', x === b));
+  fone.classList.toggle('branco', b.dataset.cor === 'branco');
+  vel = 6; ultimoToque = performance.now();   // dá um giro rápido para mostrar a traseira
+});
+</script>
+</body>
+</html>
